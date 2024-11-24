@@ -5,7 +5,7 @@ from datetime import datetime
 from threading import Thread
 
 from core.logger import setup_logger
-
+from core.music_api import VkMusicAPI
 
 class App:
     def __init__(self) -> None:
@@ -16,7 +16,7 @@ class App:
         self._logger.info("App started.")
 
     def start_in_thread(self) -> None:
-        self._app_thread = Thread(target=self.start, daemon=True)
+        self._app_thread = Thread(target=self.start)
         self._app_thread.start()
 
     def stop(self) -> None:
