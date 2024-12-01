@@ -2,10 +2,11 @@
 # All rights reserved.
 
 from datetime import datetime
-from threading import Thread
+import webbrowser
 
 from core.logger import setup_logger
-from core.music_api import VkMusicAPI
+from yandex_music import Client
+
 
 class App:
     def __init__(self) -> None:
@@ -15,16 +16,10 @@ class App:
     def start(self) -> None:
         self._logger.info("App started.")
 
-    def start_in_thread(self) -> None:
-        self._app_thread = Thread(target=self.start)
-        self._app_thread.start()
-
     def stop(self) -> None:
         self._app_thread = None
         self._logger.info("App finished.")
 
 
 if __name__ == "__main__":
-    app = App()
-    app.start_in_thread()
-    app.stop()
+    App().start()
