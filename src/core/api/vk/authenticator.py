@@ -6,7 +6,7 @@ from vkpymusic import TokenReceiver, Service
 
 
 class VkAuthenticator:
-    CONFIG_PATH = r"C:\Users\kiryx_1zgasrh\Projects\EchoPoint\src\config\apiconf.cfg"
+    CONFIG_PATH = r"C:\Users\kiryx_1zgasrh\Projects\EchoPoint\src\config\tokens.cfg"
 
     @property
     def is_auth(self) -> bool:

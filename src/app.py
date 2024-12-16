@@ -2,22 +2,19 @@
 # All rights reserved.
 
 from datetime import datetime
-import webbrowser
-
 from core.logger import setup_logger
-from yandex_music import Client
 
 
 class App:
+
     def __init__(self) -> None:
         self._logger = setup_logger(datetime.now().strftime("%Y-%m-%d %H-%M-%S.log"))
-        self._app_thread = None
 
     def start(self) -> None:
         self._logger.info("App started.")
+        # Code...
 
     def stop(self) -> None:
-        self._app_thread = None
         self._logger.info("App finished.")
 
 
